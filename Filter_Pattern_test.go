@@ -11,6 +11,9 @@ func TestFilter(t *testing.T) {
 
 	var fliter MaleCriteria
 
-	t.Log(fliter.Criteria(p))
+	s := fliter.Criteria(p)
+	for _, n := range s {
+		t.Log(n)
+	}
 
 }
