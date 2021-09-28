@@ -1,4 +1,5 @@
 @startuml
+title Abstract Factort
 abstract class Shape {
     + public Draw() 
 }
