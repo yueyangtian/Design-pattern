@@ -1,26 +1,27 @@
-package DesginPattern
+package Factory_Pattern
 
 import (
-	"fmt"
 	"errors"
+	"fmt"
 )
+
 type Shape interface {
-    Draw() string
+	Draw() string
 }
 
-type Circle struct {}
-type Square struct {}
-type Rectangle struct {}
+type Circle struct{}
+type Square struct{}
+type Rectangle struct{}
 
-func (* Circle) Draw() string {
+func (*Circle) Draw() string {
 	return "Cricle"
 }
 
-func (* Square) Draw() string {
+func (*Square) Draw() string {
 	return "Square"
 }
 
-func (* Rectangle) Draw() string {
+func (*Rectangle) Draw() string {
 	return "Rectangle"
 }
 
@@ -34,7 +35,6 @@ func Create(shape string) (Shape, error) {
 		return new(Square), nil
 	default:
 		return nil, errors.New(fmt.Sprintf("%s not in Shape", shape))
-		
+
 	}
 }
-

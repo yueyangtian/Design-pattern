@@ -1,4 +1,4 @@
-package DesginPattern
+package Abstract_Factory_Pattern
 
 type Worker interface {
 	Work() string
