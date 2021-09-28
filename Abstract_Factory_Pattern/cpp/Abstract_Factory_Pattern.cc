@@ -24,25 +24,51 @@ public:
         cout << "Rectangle" << endl;
     }    
 };
+class Color {
+public:
+    virtual void Tint() = 0;
+};
+class Red : public Color {
+public:
+    virtual void Tint() {
+        cout << "Red" <<endl;
+    }
+};
+class Black : public Color {
+public:
+    virtual void Tint() {
+        cout << "Black" <<endl;
+    }
+};
+
 class Factory {
 public:
-    Shape* Create(std::string type) {
-        if (type == "Circle") {
-            return new Circle;
-        } else if (type == "Square") {
-            return new Square;
-        } else if (type == "Rectangle") {
-            return new Rectangle;
-        } else {
-            return NULL;
-        }
+    virtual Shape* CreateShape() = 0;
+    virtual Color* CreateColor() = 0;
+};
+
+class RedCircleFactory : public Factory {
+public:
+    Shape* CreateShape() {
+        return new Circle;
+    }
+    Color* CreateColor() {
+        return new Red;
+    }
+};
+class BlackRectangleFactory : public Factory {
+        Shape* CreateShape() {
+        return new Rectangle;
+    }
+    Color* CreateColor() {
+        return new Black;
     }
 };
 
 void test_factory() {
-    Factory factory;
-    auto s = factory.Create("Circle");
-    s->Draw();
+    Factory* f = new RedCircleFactory;
+    f->CreateColor()->Tint();
+    f->CreateShape()->Draw();
 }
 
 int main() {
