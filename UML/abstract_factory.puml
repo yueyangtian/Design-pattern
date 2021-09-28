@@ -1,0 +1,56 @@
+@startuml
+abstract class Shape {
+    + public Draw() 
+}
+class Circle {
+    + public Draw()
+}
+class Square {
+    + public Draw()
+}
+class Rectangle {
+    + public Draw()
+}
+
+abstract class Color {
+    + public Tint() 
+}
+class Red {
+    + public Tint()
+}
+class Black {
+    + public Tint()
+}
+
+abstract class Factory {
+    + public CreateShap() :Shap
+    + public CreateColor() :Color
+}
+
+class RedCircleFactory {
+    + public CreateShap()
+    + public CreateColor()
+}
+
+class BlackRectangleFactory {
+    + public CreateShap()
+    + public CreateColor()
+}
+
+Circle <|.up. Shape
+Square <|.up. Shape
+Rectangle <|.up. Shape
+
+Red <|.up. Color
+Black <|.up. Color
+
+BlackRectangleFactory .up.> Rectangle
+BlackRectangleFactory .up.> Black
+
+RedCircleFactory .up.> Circle
+RedCircleFactory .up.> Red
+
+RedCircleFactory <|.. Factory
+BlackRectangleFactory <|.. Factory
+
+@enduml

@@ -13,13 +13,13 @@ class Rectangle {
     + public Draw()
 }
 class Factory {
-    + public Create() :Shap
+    + public Create(string) :Shap
 }
 Circle <|.up. Shape
 Square <|.up. Shape
 Rectangle <|.up. Shape
 
-Rectangle <.down. Factory:Create() :Shap
-Circle <.down. Factory:Create() :Shap
-Square <.down. Factory:Create() :Shap
+Rectangle <.down. Factory:Create(string) :Shap
+Circle <.down. Factory:Create(string) :Shap
+Square <.down. Factory:Create(string) :Shap
 @enduml
