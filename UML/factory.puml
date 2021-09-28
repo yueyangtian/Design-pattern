@@ -1,0 +1,25 @@
+@startuml
+title Shape Factory
+abstract class Shape {
+    + public Draw() 
+}
+class Circle {
+    + public Draw()
+}
+class Square {
+    + public Draw()
+}
+class Rectangle {
+    + public Draw()
+}
+class Factory {
+    + public Create() :Shap
+}
+Circle <|.up. Shape
+Square <|.up. Shape
+Rectangle <|.up. Shape
+
+Rectangle <.down. Factory:Create() :Shap
+Circle <.down. Factory:Create() :Shap
+Square <.down. Factory:Create() :Shap
+@enduml
