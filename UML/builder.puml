@@ -1,0 +1,28 @@
+@startuml
+title Builder Pattern
+abstract class Car {
+    + public Drive()
+    + public Look()
+} 
+class car {
+    - private speed :int
+    - private color :string
+    + public Drive()
+    + public Look()
+}
+abstract class CarBuilder {
+    + public SetSpeed(int) :CarBuilder
+    + public SetColor(string) :CarBuilder
+    + public Build() :Car
+}
+class cb {
+    - private speed :int
+    - private color :string
+    + public SetSpeed(int) :CarBuilder
+    + public SetColor(string) :CarBuilder
+    + public Build() :Car
+}
+car .up.|> Car
+cb .up.|> CarBuilder
+Car .right.* CarBuilder
+@enduml
