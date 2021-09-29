@@ -7,4 +7,5 @@
 #### 模式结构
 
 * 如图通过CarBuilder建造者对汽车颜色以及时速属性进行构建
+
 ![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/yueyangtian/Design-pattern/master/UML/builder.puml)
