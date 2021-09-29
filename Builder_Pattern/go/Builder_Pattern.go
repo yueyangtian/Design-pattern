@@ -1,4 +1,4 @@
-package DesginPattern
+package Builder_Pattern
 
 import "fmt"
 
@@ -8,8 +8,8 @@ type Car interface {
 }
 
 type CarBuilder interface {
-	Speed(int) CarBuilder
-	Look(string) CarBuilder
+	SetSpeed(int) CarBuilder
+	SetColor(string) CarBuilder
 	Build() Car
 }
 
@@ -18,12 +18,12 @@ type cb struct {
 	color string
 }
 
-func (c *cb) Speed(sp int) CarBuilder {
+func (c *cb) SetSpeed(sp int) CarBuilder {
 	c.speed = sp
 	return c
 }
 
-func (c *cb) Look(color string) CarBuilder {
+func (c *cb) SetColor(color string) CarBuilder {
 	c.color = color
 	return c
 }

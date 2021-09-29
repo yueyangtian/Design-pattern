@@ -25,4 +25,5 @@ class cb {
 car .up.|> Car
 cb .up.|> CarBuilder
 Car .right.* CarBuilder
+car <.right. cb
 @enduml
