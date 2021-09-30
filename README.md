@@ -6,7 +6,7 @@
 * [抽象工厂模式](./Abstract_Factory_Pattern/)
 * [建造者模式](./Builder_Pattern/)
 * [单例模式](./Singleton_Pattern/)
-* [原型模式](./Proto_Pattern/)
+* [原型模式](./Prototype_Pattern/)
 
 ### 结构型
 
