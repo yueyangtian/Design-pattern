@@ -1,0 +1,23 @@
+@startuml
+title Adapter Pattern
+abstract class Computer {
+    + public insertInSquarePort
+}
+
+class Windows {
+    + public insertInCriclePort
+}
+
+class Mac {
+    + public insertInSquarePort
+}
+
+class WindowsAdapter {
+    + public insertInSquarePort
+}
+
+Computer <|.. WindowsAdapter
+Computer <|.. Mac
+
+WindowsAdapter ..> Windows
+@enduml
