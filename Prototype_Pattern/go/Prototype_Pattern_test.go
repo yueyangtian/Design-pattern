@@ -1,4 +1,4 @@
-package DesginPattern
+package Prototype_Pattern
 
 import (
 	"testing"

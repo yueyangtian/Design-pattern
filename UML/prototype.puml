@@ -1,0 +1,18 @@
+@startuml
+title Prototype Pattern
+abstract class inode {
+    + public Print()
+    + public Clone()
+}
+class file {
+    + public Print()
+    + public Clone()   
+}
+
+class folder {
+    + public Print()
+    + public Clone()
+}
+folder .up.|> inode
+file .up.|> inode
+@enduml
