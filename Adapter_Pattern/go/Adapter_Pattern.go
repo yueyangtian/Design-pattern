@@ -1,4 +1,4 @@
-package DesginPattern
+package Adapter_Pattern
 
 import (
 	"fmt"
@@ -25,6 +25,7 @@ type WindowsAdapter struct {
 }
 
 func (w *WindowsAdapter) insertInSquarePort() {
+	fmt.Print("[adapter] ")
 	w.windows.insertInCriclePort()
 }
 
