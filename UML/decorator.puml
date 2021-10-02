@@ -1,0 +1,24 @@
+@startuml
+title Decorator Pattenr
+abstract class Shape {
+    + public draw()
+} 
+
+class Cricle {
+    + public draw()
+}
+
+abstract class CricleDecorator {
+    + public Shape
+    + public draw()
+}
+
+class RedCricle {
+    + public Shape
+    + public draw()
+}
+
+Cricle .up.|> Shape
+Shape .down.o CricleDecorator
+CricleDecorator <|.. RedCricle
+@enduml
