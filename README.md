@@ -15,4 +15,5 @@
 * [组合模式](./Composite_Pattern/)
 * [修饰器模式](./Decorator_Pattern/)
 * [外观模式](./Facade_Pattern/)
+* [享元模式](./Flyweight_Pattern/)
 ### 行为型

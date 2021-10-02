@@ -1,0 +1,24 @@
+@startuml
+title Flyweight Pattern
+abstract class Shape {
+    + public draw()
+}
+
+class ColorCricle {
+    + public draw()
+    + string color
+}
+
+class ColorCricleFactory {
+    + public createColorCricle()
+}
+
+class Flyweight {
+    + public getCricle()
+    + public ColorCricleFactory
+}
+
+Flyweight --o ColorCricle
+ColorCricleFactory ..> ColorCricle
+ColorCricle ..|> Shape
+@enduml
