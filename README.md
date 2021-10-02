@@ -11,7 +11,8 @@
 ### 结构型
 
 * [适配器模式](./Adapter_Pattern/)
-* [桥接模式](./Brige_Pattern/)
+* [桥接模式](./Bridge_Pattern/)
 * [组合模式](./Composite_Pattern/)
+* [修饰器模式](./Desocator_Pattern/)
 
 ### 行为型
