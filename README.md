@@ -14,5 +14,5 @@
 * [桥接模式](./Bridge_Pattern/)
 * [组合模式](./Composite_Pattern/)
 * [修饰器模式](./Decorator_Pattern/)
-
+* [外观模式](./Facade_Pattern/)
 ### 行为型
