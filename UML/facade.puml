@@ -1,0 +1,23 @@
+@startuml
+title Facade Pattern
+class HardDrive {
+    + public read()
+}
+class Memory {
+    + public load()
+}
+class CPU {
+    + public execute()
+}
+
+class Computer {
+    + public HardDrive
+    + public Memory
+    + public CPU
+    + public start()
+}
+
+CPU ..> Computer
+Memory ..> Computer
+HardDrive ..> Computer
+@enduml
