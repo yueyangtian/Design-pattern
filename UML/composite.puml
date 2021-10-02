@@ -1,0 +1,23 @@
+@startuml
+title Composite Pattern
+class ComFloder {
+    - private Inodes
+    - private name
+    + public Add()
+    + public search()
+}
+interface inode {
+    + public search()
+}
+
+class ComLeaf {
+    + public search()
+}
+
+ComLeaf ..|>  inode
+ComFloder ..|> inode
+
+ComLeaf --o ComFloder
+ComFloder --o ComFloder
+
+@enduml

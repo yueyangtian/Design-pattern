@@ -1,4 +1,4 @@
-package DesginPattern
+package Composite_Pattern
 
 import (
 	"fmt"
