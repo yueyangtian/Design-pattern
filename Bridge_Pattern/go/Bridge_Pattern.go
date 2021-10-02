@@ -1,4 +1,4 @@
-package DesginPattern
+package Bridge_Pattern
 
 import "fmt"
 
@@ -39,17 +39,24 @@ func (w *windows) setPrinter(p printer) {
 }
 
 //hp
-type hp struct {
+type hp_windows struct {
 }
 
-func (p *hp) printFile() {
-	fmt.Println("Printing by a HP Printer")
+func (p *hp_windows) printFile() {
+	fmt.Println("OS:windows, Printing by a HP Printer")
+}
+
+type hp_linux struct {
+}
+
+func (p *hp_linux) printFile() {
+	fmt.Println("OS:linux, Printing by a HP Printer")
 }
 
 //ms
-type suf struct {
+type suf_windows struct {
 }
 
-func (s *suf) printFile() {
-	fmt.Println("Print by a Suf Printer")
+func (s *suf_windows) printFile() {
+	fmt.Println("OS:windows, Print by a Suf Printer")
 }

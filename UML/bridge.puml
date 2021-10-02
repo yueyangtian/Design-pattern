@@ -1,0 +1,46 @@
+@startuml
+title Brige Pattern
+interface printer {
+    + public printFile()
+}
+
+abstract class computer {
+    + public print()
+    + public setPrinter()
+}
+
+class linux {
+    + public print()
+    + public setPrinter()
+    + public printer
+}
+class windows {
+    + public print()
+    + public setPrinter()
+    + public printer
+}
+
+class hp_widnwos {
+    + public printFile()
+}
+
+class hp_linux {
+    + public printFile()
+}
+
+class suf_windows {
+    + public printFile()
+}
+
+computer <|.. linux
+computer <|.. windows
+
+printer <|.. hp_widnwos
+printer <|..hp_linux
+printer <|..suf_windows
+
+
+linux ..> printer
+windows ..> printer
+
+@enduml
