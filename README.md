@@ -19,3 +19,5 @@
 * [代理模式](./Proxy_Pattern/)
 
 ### 行为型
+
+* [责任链模型](./Chain_of_Responsibility_Pattern/)

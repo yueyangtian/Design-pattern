@@ -1,0 +1,25 @@
+@startuml
+title Chain of Responsibility
+abstract class Logger {
+    + public level
+    + public nextLogger :Logger
+    + public setNextLog()
+    + public log()
+    - private write()
+} 
+class Debug {
+    - private write()
+}
+
+class Info {
+    - private write()
+}
+
+class Error {
+    - private write()
+}
+
+Debug .up.|> Logger
+Info .up.|> Logger
+Error .up.|> Logger
+@enduml
