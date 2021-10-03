@@ -16,4 +16,6 @@
 * [修饰器模式](./Decorator_Pattern/)
 * [外观模式](./Facade_Pattern/)
 * [享元模式](./Flyweight_Pattern/)
+* [代理模式](./Proxy_Pattern/)
+
 ### 行为型

@@ -1,0 +1,23 @@
+@startuml
+title Proxy Pattern
+interface image {
+    + public display()
+}
+
+class RealImage {
+    + public display()
+    + public  name
+    - private load()
+}
+
+class ProxyImage {
+    + public display()
+    + public proxy()
+
+    - private RealImage
+}
+
+ProxyImage .left.> RealImage
+ProxyImage .up.|> image
+RealImage .up.|> image
+@enduml
