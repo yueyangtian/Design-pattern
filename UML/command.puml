@@ -1,0 +1,25 @@
+@startuml
+title Command Pattern
+interface Command {
+    + public Execute()
+}
+
+class Switcher {
+    + public ExecandStore()
+    - private CommandList
+}
+
+class Light {
+    + public TurnOn()
+    + public Execute()
+}
+
+class TV {
+    + public TurnOn()
+    + public Execute()
+}
+
+Switcher -up-o Command
+TV ..|> Command
+Light ..|> Command
+@enduml
