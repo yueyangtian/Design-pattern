@@ -1,0 +1,20 @@
+@startuml
+title Iterator Pattern
+interface Iter {
+    Next()
+    Frist()
+    Current()
+}
+
+class Array {
+    + public ArrayIter
+}
+class ArrayIter {
+    + public Next()
+    + public Frist()
+    + public Current()
+}
+
+ArrayIter ..|> Iter
+Array <-down- ArrayIter
+@enduml
