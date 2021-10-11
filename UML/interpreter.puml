@@ -1,0 +1,25 @@
+@startuml
+title Interpreter Pattern
+
+interface interpreter {
+    interpreter()
+}
+class Addinterpreter {
+    + public interpreter()
+}
+class Mutilinterpreter {
+    + public interpreter()
+}
+class Numberinterpreter {
+    + public interpreter()
+}
+class Context {
+    + public interpreter[]
+}
+
+interpreter <|.. Addinterpreter
+interpreter <|.. Mutilinterpreter
+interpreter <|.. Numberinterpreter
+
+Context --o interpreter
+@enduml
