@@ -20,9 +20,9 @@
 
 ### 行为型
 
-* [责任链模型](./Chain_of_Responsibility_Pattern/)
-* [命令模型](./Command_Pattern/)
-* [解释器模型](./InterPerter_Pattern/)
-* [迭代器模型](./Iterator_Pattern/)
-* [中介者模型](./Mediator_Pattern/)
-* [备忘录模型](./Memento_Pattern/)
+* [责任链模式](./Chain_of_Responsibility_Pattern/)
+* [命令模式](./Command_Pattern/)
+* [解释器模式](./InterPerter_Pattern/)
+* [迭代器模式](./Iterator_Pattern/)
+* [中介者模式](./Mediator_Pattern/)
+* [备忘录模式](./Memento_Pattern/)
