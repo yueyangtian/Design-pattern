@@ -27,3 +27,4 @@
 * [中介者模式](./Mediator_Pattern/)
 * [备忘录模式](./Memento_Pattern/)
 * [观察者模式](./Memento_Pattern/)
+* [状态模式](./State_Pattern/)

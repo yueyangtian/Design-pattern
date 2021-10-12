@@ -1,0 +1,23 @@
+@startuml
+title State Pattern
+interface Vote {
+    + public DoAction()
+}
+
+class Voted {
+    + public DoAction()
+}
+
+class UnVote {
+    + public DoAction()
+}
+
+class Votor {
+    - private state
+    - private Vote
+    + public doVote()
+}
+Voted .up.|> Vote
+UnVote .up.|> Vote
+Votor -left-> Vote
+@enduml
