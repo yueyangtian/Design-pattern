@@ -1,0 +1,34 @@
+@startuml
+title Observer Pattern
+abstract class Subject {
+    + public state
+    + public ObserberList
+    + public SetState()
+    + public NotifyAll()
+    + public Attach()
+}
+
+interface Obserber {
+    + public Notify()
+}
+
+class Obserber1 {
+    + public Notify()
+}
+
+class Obserber2 {
+    + public Notify()
+}
+
+class Subject1 {
+    + public state
+    + public ObserberList
+    + public SetState()
+    + public NotifyAll()
+}
+Obserber <|.. Obserber1
+Obserber <|.. Obserber2
+Subject o-left- Obserber
+Subject <|.. Subject1
+
+@enduml
