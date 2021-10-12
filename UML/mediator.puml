@@ -1,0 +1,14 @@
+@startuml
+title Mediator Pattern
+class User {
+    + public name
+    + public SendMessage()
+}
+
+class ChatRoom {
+    + public showMessage()
+    + public No
+}
+
+User --> ChatRoom
+@enduml
