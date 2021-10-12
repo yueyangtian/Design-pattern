@@ -1,0 +1,24 @@
+@startuml
+title strategy Pattern
+interface strategy {
+    + public Operation()
+}
+
+class AddOperation {
+    + public Operation()
+}
+
+class MutilOperation {
+    + public Operation()
+}
+
+class Context {
+    + public Exec()
+    - private strategy
+}
+
+strategy <|.. AddOperation
+strategy <|.. MutilOperation
+
+Context --o strategy
+@enduml
