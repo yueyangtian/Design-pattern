@@ -1,0 +1,21 @@
+@startuml
+title Menento Pattern
+
+class Text {
+    + public string
+}
+class TextEdit {
+    + public Append()
+    + public Revert()
+    - private TextMenento
+}
+
+class TextMenento {
+    + public Push()
+    + public Pop()
+}
+TextEdit --> TextMenento
+TextEdit --> Text
+TextMenento --> Text
+
+@enduml
